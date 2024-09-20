@@ -27,9 +27,19 @@ export default function EventInfo() {
           Event Info
         </p>
         <h3 className="section-heading text-dull max-w-[30rem] text-center">
-          Find out all the <span className="text-white">details</span>,{" "}
-          <span className="text-white">location</span>, and{" "}
-          <span className="text-white">travel info</span> for our special day.
+          Find out all the{" "}
+          <span className="text-white">
+            details
+          </span>
+          ,{" "}
+          <span className="text-white">
+            location
+          </span>
+          , and{" "}
+          <span className="text-white">
+            travel info
+          </span>{" "}
+          for our special day.
         </h3>
         <div className="relative w-[100%] lg:w-[50rem] rounded-[13px] overflow-hidden aspect-video">
           <Image
@@ -40,8 +50,12 @@ export default function EventInfo() {
           />
         </div>
         <div className="flex justify-center sm:flex-row flex-col divide-y sm:divide-y-0 sm:divide-x items-stretch">
-          {eventInfos.map((info) => (
-            <IconText icon={info.icon} text={info.text} />
+          {eventInfos.map((info, i) => (
+            <IconText
+              key={i}
+              icon={info.icon}
+              text={info.text}
+            />
           ))}
         </div>
       </VStack>
